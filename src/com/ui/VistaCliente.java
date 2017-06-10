@@ -87,6 +87,12 @@ public class VistaCliente extends javax.swing.JFrame {
         });
         mnMenuPrincipal.add(mntmRegistrarse);
         
+        mnAyuda = new JMenu("Ayuda");
+        menuBar.add(mnAyuda);
+        
+        mntmAcerca = new JMenuItem("Random");
+        mnAyuda.add(mntmAcerca);
+        
         this.addWindowListener(new WindowListener() {
 
             @Override public void windowOpened(WindowEvent e) {}
@@ -133,6 +139,7 @@ public class VistaCliente extends javax.swing.JFrame {
         jScrollPane2 = new JScrollPane();
         jScrollPane2.setBounds(287, 173, 124, 175);
         jList1 = new JList();
+        jList1.setFont(new Font("Dialog", Font.BOLD, 16));
         jTextField4 = new JTextField();
         jTextField4.setBounds(19, 364, 253, 26);
         jButton4 = new JButton();
@@ -170,7 +177,7 @@ public class VistaCliente extends javax.swing.JFrame {
         jPasswordField1.setEnabled(false);
 
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Consolas", 0, 12)); 
+        jTextArea1.setFont(new Font("Dialog", Font.PLAIN, 14)); 
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
@@ -281,4 +288,6 @@ public class VistaCliente extends javax.swing.JFrame {
     public javax.swing.JTextArea jTextArea1;
     public javax.swing.JTextField jTextField3;
     public javax.swing.JTextField jTextField4;
+    private JMenu mnAyuda;
+    private JMenuItem mntmAcerca;
 }
